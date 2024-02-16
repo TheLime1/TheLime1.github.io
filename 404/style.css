@@ -210,3 +210,8 @@ a {
 #loadScriptsButton:hover {
   background-color: #ff9900;
 }
+
+.easter-egg {
+  position: absolute;
+  z-index: -1;
+}
