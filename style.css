@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  height: 100%;
+}
+
+.text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: -100px;
+}
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.error {
+  font-size: 120px;
+  font-weight: bold;
+  color: #ff9900;
+  margin-top: 20px;
+}
+
+.message {
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: -20px;
+  text-align: left;
+}
+
+.lemon {
+  margin-right: -100px;
+}
+
+.lemon_image {
+  width: 75%;
+  transform: rotate(45deg);
+}
+
+.overlay-text {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 120px;
+  z-index: 1;
+}
+
+/* Nabla: CSS class for a variable style */
+/* Use a uniquifier for the class name */
+.nabla {
+  font-family: "Nabla", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "EDPT" 100, "EHLT" 12;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.socials {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0a66c2;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #cd201f;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.button-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -25px;
+}
+
+#loadScriptsButton {
+  display: grid;
+  align-items: center;
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+
+#loadScriptsButton:hover {
+  background-color: #ff9900;
+}
+
+.easter-egg {
+  position: absolute;
+  z-index: -1;
+}
